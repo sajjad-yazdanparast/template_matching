@@ -20,7 +20,6 @@ class TemplateMatcher :
     for pt in zip(*loc[::-1]):
         cv.rectangle(self.rgb_image, pt, (pt[0] + w, pt[1] + h), (255,0,0), 2)
 
-
   def save_fig(self,path_to_save):
     plt.imsave(fname=path_to_save,arr=self.rgb_image)
 
@@ -33,5 +32,7 @@ path_to_query2 = './smal_image2.png'
 tm2 = TemplateMatcher(path_to_big_image=path_to_big_image, path_to_query=path_to_query2)
 tm2.match()
 
-tm.save_fig('./tm_res.png')
-tm2.save_fig('./tm2_res.png')
+tm.save_fig('/usr/src/app/volume/tm_res.png')
+tm2.save_fig('/usr/src/app/volume/tm2_res.png')
+
+print('FINISHED ....\n')
